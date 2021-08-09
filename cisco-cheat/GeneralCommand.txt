@@ -1,0 +1,42 @@
+Initial Configuration Cisco Switch and Router
+=============================================
+
+hostname xyz | global config | sets hostname to xyz
+
+enable secret xyz | global config | sets encrypted password for priv. EXEC to xyz 
+
+service passwo­rd-­enc­rypt | global config | encrypts all passwords
+
+line console 0 | global config | enters line config mode for console
+
+line vty 0 15 | global config | enters line config mode for 16 vty lines
+
+pas­sword xyz | line config | sets line password to xyz
+
+log­in | line config | enables users to login
+
+int vlan 1 | global config | enters interface config mode for vlan1
+
+ip address [IP] [subnet] | interface config | sets IP address
+
+no shut | interface config | turns on interface
+
+banner motd #Text Here# | global config | sets motd banner
+
+
+Router­-Sp­ecific Config­uration Commands
+=======================================
+int­erface g0/1 | global config | enters interface config for Gigabit Ethernet 0/1
+
+ip address IP/prefix | interface config | sets interf­ace's IPv4 address
+
+no shut | interface config | turns on the interface
+
+des­cri­ption descr­iption text | interface config | used to document info about the interface
+
+ipv6 address IP/prefix | interface config | sets interf­ace's IPv6 address
+
+ipv6 address IP/prefix link-local | interface config | sets interf­ace's IPv6 link-local address
+
+ipv6 unicast-routing | global config | enables IPv6 routing
+
