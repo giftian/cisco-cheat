@@ -26,6 +26,7 @@ banner motd #Text Here# | global config | sets motd banner
 
 Router­-Sp­ecific Config­uration Commands
 =======================================
+
 int­erface g0/1 | global config | enters interface config for Gigabit Ethernet 0/1
 
 ip address IP/prefix | interface config | sets interf­ace's IPv4 address
