@@ -1,0 +1,2 @@
+# cisco-cheat
+configure cisco
