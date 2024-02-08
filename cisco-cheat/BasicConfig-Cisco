@@ -1,0 +1,33 @@
+!Base config
+conf t
+hostname namaSwitch
+  int vl 1
+  ip add 10.1.1.x
+
+vtp transparent
+queue-set 2
+mls qos trust dscp
+storm-control multicast level 50.00
+no cdp enable
+spanning-tree portfast
+spanning-tree bpduguard enable
+
+Switch01(config)# crypto key generate rsa
+The name for the keys will be:
+Switch01.routerfreak.com
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+# line vty 0 4
+(config-line)# transport input ssh
+(config-line)# login local
+(config-line)# password routerfreak
+(config-line)# exit
+# line console 0
+(config-line)# logging synchronous
+(config-line)# login local
+Switch01# service password-encryption
+remote-computer# ssh 192.168..101.1
+Log in as: username
+Password:
+Switch01>en
+Password:
